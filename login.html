@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Inventario | C D I</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="logo">
+            <i class='bx bxs-capsule'></i>
+            <div class="logo-name"><span>Inven</span>tario</div>
+        </a>
+        <ul class="side-menu">
+            <li><a href="https://wa.me/+584146871663"><i class='bx bx-group'></i>Soporte</a></li>
+            <li>
+                <a href="http://localhost/proyecto/index.html" class="logout">
+                    <i class='bx bx-log-out-circle'></i>
+                    Salir
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <form action="#">
+            </form>
+            <a class="profile">
+                <img src="images/Logo.jpg">
+            </a>
+        </nav>
+
+        <!-- End of Navbar -->
+
+        <main>
+            <div class="header">
+                <div class="left">
+                    <h1>Informacion General</h1>
+                </div>
+            </div>
+
+            <!-- Insights -->
+            <ul class="insights">
+                <a href="http://localhost/proyecto/cdi.php" target="_blank">
+                <li>
+                    <i class='bx bx-home-alt-2'></i>
+                    <span class="info">
+                        <p>CDI</p>
+                    </span>
+                </li>
+                </a>
+
+                <a href="http://localhost/proyecto/ssocial.php" target="_blank">
+                <li><i class='bx bx-first-aid'></i>
+                    <span class="info">
+                        <p>Seguro Social</p>
+                    </span>
+                </li>
+                </a>
+
+                <a href="http://localhost/proyecto/donaciones.php" target="_blank">
+                <li><i class='bx bx-clinic'></i>
+                    <span class="info">
+                        <p>Donaciones</p>
+                    </span>
+                </li>
+                </a>
+
+                <a href="http://localhost/proyecto/ministerio.php" target="_blank">
+                <li><i class='bx bx-capsule'></i>
+                    <span class="info">
+                        <p>Ministerio autoridad unica de salud</p>
+                    </span>
+                </li>
+                </a>
+
+                <a href="http://localhost/proyecto/otros.php">
+                <li><i class='bx bx-plus-medical'></i>
+                    <span class="info">
+                        <p>Otros</p>
+                    </span>
+                </li>
+                </a>
+            </ul>
+            <!-- End of Insights -->
+
+                <!-- Reminders -->
+                <div class="bottom-data">
+                <div class="reminders">
+                    <div class="header">
+                        <i class='bx bx-note'></i>
+                        <h3>Recordatorios</h3>
+                    </div>
+                    <ul class="task-list">
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Agregar Recordatorio">
+                        <button onclick="addTask()">Agregar</button>
+                    </div>
+                    <ul id=list-container>
+                        <!-- <li class="checked">Tarea 1</li>
+                         <li>Tarea 2</li>
+                         <li>Tarea 3</li> -->
+                    </ul>
+                    </ul>
+                </div>
+
+                <!-- End of Reminders-->
+
+        </main>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

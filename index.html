@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Animated login form - Bedimcode</title>
+</head>
+<body>
+    <div class="login">
+        <img src="assets/img/fondo.jpg" alt="login image" class="login__img">
+
+        <form action="" class="login__form" onsubmit="return login()">
+            <h1 class="login__title">Entrar</h1>
+
+            <div class="login__content">
+                <div class="login__box">
+                    <i class="ri-lock-2-line login__icon"></i>
+
+                    <div class="login__box-input">
+                        <input type="password" required class="login__input" id="login-pass" placeholder=" ">
+                        <label for="login-pass" class="login__label">Contraseña</label>
+                        <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="login__button">Acceder</button>
+
+            <p class="login__register">
+                Olvidaste la contraseña? <a href="https://wa.me/+584146871663">Click aqui</a>
+            </p>
+        </form>
+    </div>
+
+    <script>
+      function login() {
+          var password = document.getElementById('login-pass').value;
+
+          if (password === 'admin') {
+              alert("Ingresaste");
+              window.location.href = "http://localhost/proyecto/login.html";
+          } else {
+              alert("Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.");
+              document.getElementById('login-pass').value = '';
+          }
+          return false;
+      }
+
+      const showHiddenPass = (loginPass, loginEye) =>{
+   const input = document.getElementById(loginPass),
+         iconEye = document.getElementById(loginEye)
+
+   iconEye.addEventListener('click', () =>{
+      // Change password to text
+      if(input.type === 'password'){
+         // Switch to text
+         input.type = 'text'
+
+         // Icon change
+         iconEye.classList.add('ri-eye-line')
+         iconEye.classList.remove('ri-eye-off-line')
+      } else{
+         // Change to password
+         input.type = 'password'
+
+         // Icon change
+         iconEye.classList.remove('ri-eye-line')
+         iconEye.classList.add('ri-eye-off-line')
+      }
+   })
+}
+
+showHiddenPass('login-pass','login-eye')
+  </script>
+</body>
+</html>
